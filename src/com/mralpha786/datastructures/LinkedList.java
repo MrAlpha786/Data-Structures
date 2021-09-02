@@ -7,6 +7,7 @@ public class LinkedList {
     private Node last;
     private int count = 0;
 
+    // Return the node before the given node;
     // Time: O(n); Space: O(1)
     private Node getPreviousNode(Node node) {
         var current = first;
@@ -20,6 +21,7 @@ public class LinkedList {
         return first == null;
     }
 
+    // Prepend item to list;
     // Time: O(1); Space: O(1)
     public void addFirst(int item) {
         var node = new Node(item);
@@ -32,6 +34,7 @@ public class LinkedList {
         count++;
     }
 
+    // Append item to list;
     // Time: O(1); Space: O(1)
     public void addLast(int item) {
         var node = new Node(item);
@@ -44,6 +47,7 @@ public class LinkedList {
         count++;
     }
 
+    // Remove the first item and shift head to next item;
     // Time: O(1); Space: O(1)
     public int removeFirst() {
         if (isEmpty())
@@ -58,6 +62,7 @@ public class LinkedList {
         return value;
     }
 
+    // Remove the last item and shift tail to previous item;
     // Time: O(n); Space: O(1)
     public int removeLast() {
         if (isEmpty())
@@ -102,6 +107,7 @@ public class LinkedList {
     }
 
     @Override
+    // Time: O(n); Space: O(n)
     public String toString() {
         if (isEmpty()) return "[]";
 
@@ -118,6 +124,7 @@ public class LinkedList {
 
     // <------------ Extras ------------>
 
+    // Convert this list to int[];
     // Time: O(n); Space: O(n)
     public int[] toArray() {
         int[] array = new int[count];
@@ -148,6 +155,7 @@ public class LinkedList {
         first = previous;
     }
 
+    // Return Kth node from the end;
     // Time: O(n); Space: O(1)
     public int getKthFromEnd(int k) {
         if (isEmpty())
@@ -168,6 +176,7 @@ public class LinkedList {
         return a.value;
     }
 
+    // Return int[] containing middle element (two element if size is even else one element);
     // Time: O(n); Space: O(1)
     public int[] getMiddle() {
         if (isEmpty())
@@ -189,6 +198,7 @@ public class LinkedList {
         last.next = first;
     }
 
+    // Check if list contains a loop;
     // Time: O(n); Space: O(1)
     public boolean hasLoop() {
         if (isEmpty())
@@ -205,6 +215,7 @@ public class LinkedList {
         return false;
     }
 
+    // Node
     private static class Node {
         int value;
         Node next;
