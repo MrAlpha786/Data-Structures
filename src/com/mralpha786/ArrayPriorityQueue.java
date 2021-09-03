@@ -1,4 +1,4 @@
-package com.mralpha786.datastructures;
+package com.mralpha786;
 
 public class ArrayPriorityQueue {
     private final int[] queue; // Store all items in an array.

@@ -1,4 +1,4 @@
-package com.mralpha786.datastructures;
+package com.mralpha786;
 
 public class Stack {
     private final int[] stack;

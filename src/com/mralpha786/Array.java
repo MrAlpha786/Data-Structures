@@ -1,4 +1,4 @@
-package com.mralpha786.datastructures;
+package com.mralpha786;
 
 public class Array {
     private int[] items; // Store all items in an array;
